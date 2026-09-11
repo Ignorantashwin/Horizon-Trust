@@ -14,3 +14,16 @@ application-*.yml
 .idea/
 *.iml
 .DS_Store
+
+# Local configuration & secrets
+**/src/main/resources/application.properties
+**/src/main/resources/application-local.properties
+**/src/main/resources/application-local.yml
+.env
+.env.*
+
+# Build / IDE
+**/target/
+.idea/
+*.iml
+.DS_Store
