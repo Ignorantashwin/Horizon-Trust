@@ -1,0 +1,19 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.horizontrust</groupId>
+    <artifactId>horizon-trust</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>account-service</module>
+        <module>transaction-service</module>
+        <module>fraud-detection-service</module>
+        <module>payment-service</module>
+        <module>notification-service</module>
+        <module>api-gateway</module>
+    </modules>
+
+</project>

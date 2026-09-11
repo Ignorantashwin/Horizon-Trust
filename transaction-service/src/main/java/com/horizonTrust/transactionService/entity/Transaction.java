@@ -1,0 +1,54 @@
+package com.horizonTrust.transactionService.entity;
+
+import com.horizonTrust.transactionService.enums.TransactionStatus;
+import com.horizonTrust.transactionService.enums.TransactionType;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "transactions")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Transaction {
+    @Id
+   @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+
+    @Column(nullable = false)
+    private String senderAccount;
+
+    @Column(nullable = false)
+    private String receiverAccount;
+
+    @Column(nullable = false, precision = 15, scale = 2)
+    private BigDecimal amount;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TransactionType type;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TransactionStatus status;
+
+    private String description;
+
+    private String referenceNumber;
+
+    private String failureReason;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    private LocalDateTime completedAt;
+
+}

@@ -1,0 +1,16 @@
+
+# Secrets & local configuration
+.env
+.env.*
+application-local.properties
+application-local.yml
+application-*.properties
+application-*.yml
+**/src/main/resources/application-local.properties
+**/src/main/resources/application-local.yml
+
+# Build output
+**/target/
+.idea/
+*.iml
+.DS_Store
